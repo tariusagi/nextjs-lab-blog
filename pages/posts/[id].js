@@ -10,7 +10,7 @@ import utilStyles from '../../styles/utils.module.css';
 // build time using props returned from this function.
 // See https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation
 export async function getStaticProps({ params }) {
-  const postData = getPostData(params.id)
+  const postData = await getPostData(params.id)
   return {
     props: {
       postData
